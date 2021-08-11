@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    --violet:  hsl(257, 40%, 49%);
+    --soft-magenta: hsl(300, 40%, 60%);
+}
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: url('images/bg-mobile.svg')no-repeat top center;
+    background-size: cover;
+    background-color: var(--violet);
+    min-height: 100vh;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 375px;
+    margin: auto;
+    display: flex;
+    flex-flow:column nowrap;
+    color: #fff;
+}
+
+.first-column {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
+}
+
+.logo {
+    max-width: 100%;
+    width: 40%;
+    margin: 2rem 0 3rem 0;
+    height: auto;
+    padding-left: 2rem;
+}
+
+.mockup {
+    display: inline-block;
+    max-width: 100%;
+    margin: 1rem auto;
+}
+
+
+.landing-content {
+    max-width: 80%;
+    margin: auto;
+    text-align: center;
+}
+
+.btn {
+    background:#fff;
+    color: var(--violet);
+    border-radius: 1rem;
+    font-size: .75rem;
+    padding: .4rem 4rem;
+    -webkit-box-shadow: 1px 1px 5px -px #0A090A; 
+    box-shadow: 1px 1px 5px -2px #0A090A;
+}
+
+.btn:active, .btn:hover {
+    background: var(--soft-magenta);
+    color: #fff;
+    cursor: pointer;
+}
+
+.social-link {
+    display: flex;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+.social-btn {
+    display: block;
+    color: #fff;
+    margin: auto .2rem;
+    border: 1px solid #fff;
+    border-radius: 100%;
+}
+
+.fab {
+    padding: .5rem;
+}
+
+.social-btn:hover {
+    border: 1px solid var(--soft-magenta);
+    color: var(--soft-magenta);
+}
+
+
+footer {
+    color: #fff;
+}
+
+
+@media (min-width: 1024px){
+    body {
+        background: url('images/bg-desktop.svg')no-repeat top center;
+        background-size: 90%;
+        background-color: var(--violet);
+    }
+    .container {
+        max-width: 90rem;
+        width: 90%;
+        margin: auto;
+        flex-flow: row nowrap;
+        align-content: center;
+    }
+    .logo {
+        padding: 0;
+    }
+    .mockup {
+        width: 100%;
+        height: auto;
+    }
+    .landing-content{
+        width: 40%;
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: flex-start;
+        text-align: start;
+    }
+
+    .title {
+        font-size:2.5rem
+    }
+
+    .lead {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        padding: .5rem 3rem;
+    }
+
+    .social-link {
+        justify-content: flex-end;
+        padding-right: 3rem;
+    }
+}
